@@ -1,22 +1,22 @@
 "use client";
 
+import CardSlider from "./component/ImageSlider";
 import { ThemeProvider, useTheme } from "./component/themeContext";
-
+import { constructionCards, interiorCards, realEstateCards } from "./component/cardStatic";
 function InnerHome() {
   const { theme, toggleTheme } = useTheme();
-const handleInstagramRedirect = () => {
+  const handleInstagramRedirect = () => {
     window.open('https://www.instagram.com/mahalaxmi_const._and_interiors?igsh=eXJsYWVlMTBpeHo4', '_blank');
   };
- return (
-    <div className={`min-h-screen flex flex-col ${
-      theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-800"
-    } transition-colors duration-300`}>
-      
+  return (
+    <div className={`min-h-screen flex flex-col ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-800"
+      } transition-colors duration-300`}>
+
       {/* Header */}
       <header className={`${theme === "dark" ? "bg-gray-800" : "bg-gray-100"} shadow-md sticky top-0 z-10`}>
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center px-4 py-3">
           <img src="/logo.png" alt="Logo" className="h-10 mb-2 sm:mb-0" />
-          
+
           {/* Nav */}
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base mb-2 sm:mb-0">
             <a href="/" className="hover:text-green-600 transition-colors">Home</a>
@@ -30,16 +30,14 @@ const handleInstagramRedirect = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <button className={`px-3 sm:px-4 py-1 rounded hover:opacity-80 transition ${
-              theme === "dark" ? "bg-gray-700" : "bg-gray-200"
-            }`}>
+            <button className={`px-3 sm:px-4 py-1 rounded hover:opacity-80 transition ${theme === "dark" ? "bg-gray-700" : "bg-gray-200"
+              }`}>
               Sign In
             </button>
             <button
               onClick={toggleTheme}
-              className={`px-3 sm:px-4 py-1 rounded transition flex items-center gap-2 ${
-                theme === "dark" ? "bg-yellow-400 text-gray-900" : "bg-gray-800 text-white"
-              }`}
+              className={`px-3 sm:px-4 py-1 rounded transition flex items-center gap-2 ${theme === "dark" ? "bg-yellow-400 text-gray-900" : "bg-gray-800 text-white"
+                }`}
             >
               {theme === 'dark' ? '☀️' : '🌙'} Theme
             </button>
@@ -56,48 +54,46 @@ const handleInstagramRedirect = () => {
         {/* Enhanced Contact Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {[
-            { 
-              icon: "📍", 
-              title: "Address", 
+            {
+              icon: "📍",
+              title: "Address",
               details: ["Madhumeet Apartment,Saiganesh Nagar,Near Baramati Court,Baramati,Pune, Maharashtra",],
               color: "from-blue-500 to-purple-500"
             },
-            { 
-              icon: "📧", 
-              title: "Email", 
+            {
+              icon: "📧",
+              title: "Email",
               details: ["mahalaximi00096@gmail.com"],
               color: "from-green-500 to-teal-500"
             },
-            { 
-              icon: "📞", 
-              title: "Call us", 
+            {
+              icon: "📞",
+              title: "Call us",
               details: ["Er. Akash Phadtare: +91 7757998804", "Er. Hrishi Phadtare: +91 8626096096"],
               color: "from-orange-500 to-red-500"
             },
           ].map(({ icon, title, details, color }, i) => (
             <div
               key={i}
-              className={`relative overflow-hidden rounded-2xl p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                theme === "dark" 
-                  ? "bg-gradient-to-br from-gray-800 to-gray-700 border border-gray-700" 
+              className={`relative overflow-hidden rounded-2xl p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${theme === "dark"
+                  ? "bg-gradient-to-br from-gray-800 to-gray-700 border border-gray-700"
                   : "bg-white border border-gray-200"
-              }`}
+                }`}
             >
               {/* Gradient accent bar */}
               <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${color}`}></div>
-              
+
               {/* Animated icon */}
               <div className="mb-6 flex justify-center">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${
-                  theme === "dark" ? "bg-gray-700" : "bg-gray-100"
-                }`}>
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${theme === "dark" ? "bg-gray-700" : "bg-gray-100"
+                  }`}>
                   <span className="text-2xl">{icon}</span>
                 </div>
               </div>
-              
+
               {/* Content */}
               <h2 className="text-xl font-bold mb-4 text-center">{title}</h2>
-              
+
               <div className="space-y-2">
                 {details.map((detail, idx) => (
                   <p key={idx} className="flex items-center text-sm sm:text-base">
@@ -106,16 +102,16 @@ const handleInstagramRedirect = () => {
                   </p>
                 ))}
               </div>
-              
+
               {/* Hover effect element */}
               <div className={`absolute -bottom-16 -right-16 w-32 h-32 rounded-full bg-gradient-to-r ${color} opacity-10 transition-all duration-300 group-hover:opacity-20`}></div>
             </div>
           ))}
         </div>
-      {/* INSTAGRAM  */}
-      
-      <div style={{margin:10,marginTop:0}}></div>
- {/* <div className={`rounded-2xl overflow-hidden shadow-xl mb-16 ${
+        {/* INSTAGRAM  */}
+
+        <div style={{ margin: 10, marginTop: 0 }}></div>
+        {/* <div className={`rounded-2xl overflow-hidden shadow-xl mb-16 ${
           theme === "dark" ? "bg-gray-800" : "bg-gradient-to-r from-amber-100 to-rose-100"
         }`}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
@@ -176,23 +172,21 @@ const handleInstagramRedirect = () => {
             </div>
           </div>
         </div> */}
- <div className={`rounded-2xl overflow-hidden shadow-xl mb-16 ${
-          theme === "dark" ? "bg-gray-800" : "bg-gradient-to-r from-blue-50 to-indigo-50"
-        }`}>
+        <div className={`rounded-2xl overflow-hidden shadow-xl mb-16 ${theme === "dark" ? "bg-gray-800" : "bg-gradient-to-r from-blue-50 to-indigo-50"
+          }`}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
             <div className="flex flex-col justify-center">
               <h2 className="text-2xl font-bold mb-4">Follow Our Construction Journey on Instagram</h2>
               <p className="mb-6">
-                Get behind-the-scenes access to our projects, see our latest work, and discover inspiration 
+                Get behind-the-scenes access to our projects, see our latest work, and discover inspiration
                 for your construction needs. Follow us for daily updates and exclusive content!
               </p>
-              <button 
+              <button
                 onClick={handleInstagramRedirect}
-                className={`self-start flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
-                  theme === "dark" 
-                    ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white" 
+                className={`self-start flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${theme === "dark"
+                    ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
                     : "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
-                }`}
+                  }`}
               >
                 Follow on Instagram
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -200,15 +194,14 @@ const handleInstagramRedirect = () => {
                 </svg>
               </button>
             </div>
-            <div 
+            <div
               className="cursor-pointer rounded-xl overflow-hidden shadow-lg transition-transform duration-500 hover:scale-105"
               onClick={handleInstagramRedirect}
             >
-              <div className={`h-full min-h-[300px] flex items-center justify-center ${
-                theme === "dark" 
-                  ? "bg-gradient-to-br from-blue-900 to-indigo-900" 
+              <div className={`h-full min-h-[300px] flex items-center justify-center ${theme === "dark"
+                  ? "bg-gradient-to-br from-blue-900 to-indigo-900"
                   : "bg-gradient-to-br from-blue-100 to-indigo-100"
-              }`}>
+                }`}>
                 <div className="text-center p-6">
                   <div className="text-5xl mb-4">🏗️</div>
                   <h3 className="text-xl font-bold mb-2">@MahalaxmiConstruction</h3>
@@ -226,24 +219,26 @@ const handleInstagramRedirect = () => {
             </div>
           </div>
         </div>
-        
 
+        {/* <CardSlider /> */}
+        <CardSlider title="🏗️ Construction Projects" cards={constructionCards} />
+      <CardSlider title="🛋️ Interior Design" cards={interiorCards} />
+      <CardSlider title="🏠 Real Estate" cards={realEstateCards} />
         {/* Additional Info */}
         <div className="mt-16 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">
             We're Here to Help
           </h2>
           <p className={theme === "dark" ? "text-gray-400" : "text-gray-600"}>
-            Our team of experts is available to answer any questions you might have. 
+            Our team of experts is available to answer any questions you might have.
             We look forward to hearing from you!
           </p>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className={`py-6 ${
-        theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-gray-100 text-gray-700"
-      } transition-colors duration-300`}>
+      <footer className={`py-6 ${theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-gray-100 text-gray-700"
+        } transition-colors duration-300`}>
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm px-4">
           <p className="text-center md:text-left mb-2 md:mb-0">
             © 2025 Copyrights by{" "}
