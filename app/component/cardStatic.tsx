@@ -8,19 +8,19 @@ export const constructionCards = [
 ];
 
 export const interiorCards = [
-  { img: "/plot.png", title: "Luxury Living Rooms", desc: "Elegant spaces designed with modern aesthetics." },
-  { img: "/plot.png", title: "Minimalist Bedrooms", desc: "Cozy interiors with a touch of simplicity." },
-  { img: "/plot.png", title: "Office Interiors", desc: "Productive workspaces with contemporary designs." },
-  { img: "/plot.png", title: "Kitchen Innovations", desc: "Smart modular kitchens built for modern homes." },
+  { img: "/interior.jpg", title: "Luxury Living Rooms", desc: "Elegant spaces designed with modern aesthetics." },
+  { img: "/interior.jpg", title: "Minimalist Bedrooms", desc: "Cozy interiors with a touch of simplicity." },
+  { img: "/interior.jpg", title: "Office Interiors", desc: "Productive workspaces with contemporary designs." },
+  { img: "/interior.jpg", title: "Kitchen Innovations", desc: "Smart modular kitchens built for modern homes." },
 ];
 
 
 
 export const realEstateCards = [
-  { img: "/interior.jpg", title: "Premium Apartments", desc: "Stylish homes designed for modern families." },
-  { img: "/interior.jpg", title: "Commercial Spaces", desc: "Perfect locations for your business growth." },
-  { img: "/interior.jpg", title: "Luxury Villas", desc: "Exclusive villas with world-class amenities." },
-  { img: "/interior.jpg", title: "Smart Townships", desc: "Integrated living with green surroundings." },
+  { img: "/real1.jpg", title: "Premium Apartments", desc: "Stylish homes designed for modern families." },
+  { img: "/real2.jpg", title: "Commercial Spaces", desc: "Perfect locations for your business growth." },
+  { img: "/plot.png", title: "Luxury Villas", desc: "Exclusive villas with world-class amenities." },
+  { img: "/plot.png", title: "Smart Townships", desc: "Integrated living with green surroundings." },
 ];
 
 

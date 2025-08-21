@@ -15,7 +15,15 @@ function InnerHome() {
       {/* Header */}
       <header className={`${theme === "dark" ? "bg-gray-800" : "bg-gray-100"} shadow-md sticky top-0 z-10`}>
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center px-4 py-3">
-          <img src="/logo.png" alt="Logo" className="h-10 mb-2 sm:mb-0" />
+          {/* <img src="/logo.jpg" alt="Logo" className="h-10 mb-2 sm:mb-0" /> */}
+          <div className="flex justify-center items-center bg-purple-200 p-2 rounded-md shadow-md">
+            <img
+              src="/logo.jpg"
+              alt="Logo"
+              className="h-10 transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-md"
+            />
+          </div>
+
 
           {/* Nav */}
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base mb-2 sm:mb-0">
@@ -76,8 +84,8 @@ function InnerHome() {
             <div
               key={i}
               className={`relative overflow-hidden rounded-2xl p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${theme === "dark"
-                  ? "bg-gradient-to-br from-gray-800 to-gray-700 border border-gray-700"
-                  : "bg-white border border-gray-200"
+                ? "bg-gradient-to-br from-gray-800 to-gray-700 border border-gray-700"
+                : "bg-white border border-gray-200"
                 }`}
             >
               {/* Gradient accent bar */}
@@ -184,8 +192,8 @@ function InnerHome() {
               <button
                 onClick={handleInstagramRedirect}
                 className={`self-start flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${theme === "dark"
-                    ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
-                    : "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
+                  ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                  : "bg-gradient-to-r from-blue-500 to-indigo-500 text-white"
                   }`}
               >
                 Follow on Instagram
@@ -199,8 +207,8 @@ function InnerHome() {
               onClick={handleInstagramRedirect}
             >
               <div className={`h-full min-h-[300px] flex items-center justify-center ${theme === "dark"
-                  ? "bg-gradient-to-br from-blue-900 to-indigo-900"
-                  : "bg-gradient-to-br from-blue-100 to-indigo-100"
+                ? "bg-gradient-to-br from-blue-900 to-indigo-900"
+                : "bg-gradient-to-br from-blue-100 to-indigo-100"
                 }`}>
                 <div className="text-center p-6">
                   <div className="text-5xl mb-4">🏗️</div>
@@ -222,8 +230,8 @@ function InnerHome() {
 
         {/* <CardSlider /> */}
         <CardSlider title="🏗️ Construction Projects" cards={constructionCards} />
-      <CardSlider title="🛋️ Interior Design" cards={interiorCards} />
-      <CardSlider title="🏠 Real Estate" cards={realEstateCards} />
+        <CardSlider title="🛋️ Interior Design" cards={interiorCards} />
+        <CardSlider title="🏠 Real Estate" cards={realEstateCards} />
         {/* Additional Info */}
         <div className="mt-16 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">
