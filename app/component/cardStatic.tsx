@@ -14,9 +14,13 @@ export const interiorCards = [
   { img: "/plot.png", title: "Kitchen Innovations", desc: "Smart modular kitchens built for modern homes." },
 ];
 
+
+
 export const realEstateCards = [
   { img: "/interior.jpg", title: "Premium Apartments", desc: "Stylish homes designed for modern families." },
   { img: "/interior.jpg", title: "Commercial Spaces", desc: "Perfect locations for your business growth." },
   { img: "/interior.jpg", title: "Luxury Villas", desc: "Exclusive villas with world-class amenities." },
   { img: "/interior.jpg", title: "Smart Townships", desc: "Integrated living with green surroundings." },
 ];
+
+
