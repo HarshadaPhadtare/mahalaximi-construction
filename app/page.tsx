@@ -58,7 +58,10 @@ function InnerHome() {
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10">
           We are happy to assist <span className="inline-block animate-bounce">😊</span>
         </h1>
-
+ {/* <CardSlider /> */}
+        <CardSlider title="🏗️ Construction Projects" cards={constructionCards} />
+         <CardSlider title="🏠 Real Estate" cards={realEstateCards} />
+        <CardSlider title="🛋️ Interior Design" cards={interiorCards} />
         {/* Enhanced Contact Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {[
@@ -228,10 +231,8 @@ function InnerHome() {
           </div>
         </div>
 
-        {/* <CardSlider /> */}
-        <CardSlider title="🏗️ Construction Projects" cards={constructionCards} />
-        <CardSlider title="🛋️ Interior Design" cards={interiorCards} />
-        <CardSlider title="🏠 Real Estate" cards={realEstateCards} />
+       
+       
         {/* Additional Info */}
         <div className="mt-16 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">
